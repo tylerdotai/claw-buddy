@@ -2,7 +2,7 @@
 
 > A terminal-based virtual pet with LLM-powered personality.
 
-Built using the [Agent Architecture Template](https://github.com/tylerdotai/agent-architecture).
+Built using the 5-phase agent architecture (Data → Storage → Logic → Model → Reliability).
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green)
