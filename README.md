@@ -1,11 +1,13 @@
-# Digital Pet 🐾
+# Claw Buddy 🦞
 
 > A terminal-based virtual pet with LLM-powered personality.
 
-Built using the 5-phase agent architecture (Data → Storage → Logic → Model → Reliability).
+Built with ❤️ using OpenClaw. Part of the Hal Stack 🦞
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green)
+![OpenClaw](https://img.shields.io/badge/Built%20with-OpenClaw-blue)
+![Hal Stack](https://img.shields.io/badge/Part%20of-Hal%20Stack%20🦞-red)
 
 ## The Problem
 
@@ -16,11 +18,13 @@ Virtual pets are either:
 
 ## Our Solution
 
-A digital pet that:
-- Remembers EVERYTHING (SQLite storage)
-- Has genuine personality (LLM-powered)
-- Survives context loss (state machine)
-- Feels alive (mood system, needs, evolution)
+Claw Buddy is:**
+
+- **Part of the Hal Stack** 🦞 — Built with OpenClaw
+- **Your CLI companion** — Lives in your terminal
+- **Never forgets** — SQLite persistence
+- **Actually smart** — LLM-powered personality
+- **Alive** — Moods, needs, evolution
 
 ## Architecture
 
@@ -42,8 +46,8 @@ See [ARCHITECTURE.md](docs/ARCHITECTURE.md) for detailed breakdown.
 ## Quick Start
 
 ```bash
-git clone https://github.com/tylerdotai/digital-pet.git
-cd digital-pet
+git clone https://github.com/tylerdotai/claw-buddy.git
+cd claw-buddy
 
 # Install
 pip install -r requirements.txt
