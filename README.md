@@ -2,7 +2,7 @@
 
 > A terminal-based virtual pet with LLM-powered personality.
 
-Built with ❤️ using OpenClaw. Part of the Hal Stack 🦞
+Built with OpenClaw using the proactive-agent skill. Part of the Hal Stack 🦞
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green)
