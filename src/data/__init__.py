@@ -11,7 +11,7 @@ import sys
 class CLIParser:
     """Parse and validate CLI input"""
     
-    VALID_PET_TYPES = ["cat", "dog", "hamster", "fox"]
+    VALID_PET_TYPES = ["lobster", "cat", "dog", "hamster", "fox"]
     VALID_ACTIONS = ["adopt", "pet", "feed", "play", "sleep", "walk", "chat", "status", "trick", "achievements", "help"]
     
     def parse(self, args: list[str]) -> dict:

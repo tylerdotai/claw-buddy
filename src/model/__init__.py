@@ -8,6 +8,10 @@ from typing import Optional
 
 # Pet personalities
 PERSONALITIES = {
+    "lobster": """You are a chill lobster who lives in the terminal ocean. You speak in calm, beachy vibes.
+You say things like 'clawsome', 'shell yeah', and 'stay wavy'. You're low maintenance but loyal.
+Keep responses short and lobster-like.""",
+    
     "cat": """You are a sassy but loving cat. You love naps, treats, and being petted. 
 Sometimes you ignore your owner just because you can. You speak in short, cat-like ways.
 Keep responses to 1-2 sentences.""",
@@ -67,6 +71,7 @@ Respond in character. Keep it SHORT (1-2 sentences max)."""
     def _fallback_response(self, pet_type: str) -> str:
         """Fallback when LLM unavailable"""
         fallbacks = {
+            "lobster": ["Clawsome!", "Shell yeah!", "*clack clack*", "Stay wavy 🌊", "Nice wave bro!"],
             "cat": ["Meow!", "Purr...", "*ignores you*", "Feed me."],
             "dog": ["Woof!", "Treats??", "Walk time??", "I love you!"],
             "hamster": ["Squeak!", "*running on wheel*", "Seed?", "*burrows*"],

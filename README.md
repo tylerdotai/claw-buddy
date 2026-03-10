@@ -60,7 +60,7 @@ python -m src.main chat "Hello!"
 
 ## Features
 
-- [x] Adopt pets (Cat, Dog, Hamster, Fox)
+- [x] Adopt pets (Lobster 🦞, Cat, Dog, Hamster, Fox)
 - [x] Stats system (Happiness, Hunger, Energy, Health)
 - [x] ASCII art visuals
 - [x] Actions: Pet, Feed, Play, Sleep, Walk
@@ -76,7 +76,7 @@ python -m src.main chat "Hello!"
 
 | Command | Action |
 |---------|--------|
-| `adopt <type> <name>` | Adopt a new pet |
+| `adopt <type> <name>` | Adopt a new pet (lobster, cat, dog, hamster, fox) |
 | `status` | Check pet stats |
 | `pet` | Pet your animal |
 | `feed` | Feed your pet |
