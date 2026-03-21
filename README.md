@@ -1,121 +1,100 @@
-# Claw Buddy 🦞
+# Claw Buddy
 
-> A terminal-based virtual pet with LLM-powered personality.
+Terminal-based virtual pet with persistence, personality, and local LLM-powered interaction.
 
-Built with OpenClaw using the proactive-agent skill. Part of the Hal Stack 🦞
+[![Python](https://img.shields.io/badge/Python-3.11+-blue)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Built with OpenClaw](https://img.shields.io/badge/Built%20with-OpenClaw-blue)](#)
 
-![Python](https://img.shields.io/badge/Python-3.11+-blue)
-![License: MIT](https://img.shields.io/badge/License-MIT-green)
-![OpenClaw](https://img.shields.io/badge/Built%20with-OpenClaw-blue)
-![Hal Stack](https://img.shields.io/badge/Part%20of-Hal%20Stack%20🦞-red)
+## Live Demo
 
-## The Problem
+- Repository: `https://github.com/tylerdotai/claw-buddy`
+- Architecture doc: `docs/ARCHITECTURE.md`
 
-Virtual pets are either:
-- Too simple (stat bars go up/down)
-- No persistence (lose progress)
-- No real personality (scripted responses)
+## About
 
-## Our Solution
-
-Claw Buddy is:**
-
-- **Part of the Hal Stack** 🦞 — Built with OpenClaw
-- **Your CLI companion** — Lives in your terminal
-- **Never forgets** — SQLite persistence
-- **Actually smart** — LLM-powered personality
-- **Alive** — Moods, needs, evolution
-
-## Architecture
-
-Built using the 5-phase agent hierarchy:
-
-```
-├── src/
-│   ├── data/        # Phase 1: Data Transport (CLI, HTTP)
-│   ├── storage/     # Phase 2: Storage & Memory (SQLite)
-│   ├── logic/       # Phase 3: Logic & State (State machine)
-│   ├── model/       # Phase 4: Model Layer (LLM prompts)
-│   └── reliability/ # Phase 5: Reliability (Validation, logging)
-├── tests/
-└── config/
-```
-
-See [ARCHITECTURE.md](docs/ARCHITECTURE.md) for detailed breakdown.
-
-## Quick Start
-
-```bash
-git clone https://github.com/tylerdotai/claw-buddy.git
-cd claw-buddy
-
-# Install
-pip install -r requirements.txt
-
-# Run
-python -m src.main adopt cat Buddy
-python -m src.main status
-python -m src.main chat "Hello!"
-```
-
-## Features
-
-- [x] Adopt pets (Lobster 🦞, Cat, Dog, Hamster, Fox)
-- [x] Stats system (Happiness, Hunger, Energy, Health)
-- [x] ASCII art visuals
-- [x] Actions: Pet, Feed, Play, Sleep, Walk
-- [x] LLM-powered chat
-- [x] Trick system
-- [x] Achievements
-- [x] Persistent storage (SQLite)
-- [x] Input validation
-- [x] Structured logging
-- [x] Graceful error handling
-
-## Commands
-
-| Command | Action |
-|---------|--------|
-| `adopt <type> <name>` | Adopt a new pet (lobster, cat, dog, hamster, fox) |
-| `status` | Check pet stats |
-| `pet` | Pet your animal |
-| `feed` | Feed your pet |
-| `play` | Play with your pet |
-| `sleep` | Put pet to sleep |
-| `walk` | Take pet for a walk |
-| `chat <message>` | Talk to your pet |
-| `trick <name>` | Teach/perform trick |
-| `achievements` | View badges |
+Claw Buddy is a CLI-native virtual pet designed to feel more alive than a simple stat tracker. It combines persistence, mood and need management, ASCII interaction, and optional local LLM chat to create a pet that lives in your terminal and remembers your history over time.
 
 ## Tech Stack
 
 | Layer | Technology |
 |-------|------------|
-| Data | Python, requests |
+| Runtime | Python |
 | Storage | SQLite |
-| Logic | State machine |
-| Model | Ollama (local LLM) |
-| Reliability | Pydantic, logging |
+| LLM | Ollama |
+| Validation / Reliability | Logging and structured checks |
+| Interface | Terminal CLI |
 
-## Requirements
+## Features
 
-- Python 3.11+
-- [Ollama](https://ollama.ai) (optional, for LLM chat)
+### Pet Experience
+- Adopt multiple pet types with names and persistent state
+- Feed, play, sleep, walk, and inspect status
+- ASCII-driven CLI interaction
+- Mood, needs, tricks, and achievements
 
-## LLM Setup
+### System Design
+- Five-phase architecture split across `src/`
+- SQLite-backed persistence
+- Health checks and reliability helpers
+- Optional LLM-powered chat
 
-```bash
-ollama pull llama3.2
+## Project Structure
+
+```text
+src/main.py               CLI entrypoint
+src/data/                 Input and external transport layer
+src/storage/              Persistence and memory
+src/logic/                State and action handling
+src/model/                LLM interaction layer
+src/reliability/          Health checks and error handling
+docs/ARCHITECTURE.md      Architecture breakdown
+requirements.txt          Python dependencies
 ```
 
-## Reliability Features
+## Getting Started
 
-- Input validation on all commands
-- Structured logging (step, outcome, duration)
-- Graceful degradation when LLM unavailable
-- Retry logic for API calls
-- Health check endpoint
+### Prerequisites
+
+- Python 3.11+
+- `pip`
+- Ollama if you want local LLM chat
+
+### Installation
+
+```bash
+git clone https://github.com/tylerdotai/claw-buddy.git
+cd claw-buddy
+pip install -r requirements.txt
+```
+
+## Deployment
+
+Claw Buddy is designed for local terminal use rather than hosted deployment.
+
+- Repository: `https://github.com/tylerdotai/claw-buddy`
+
+## Usage
+
+```bash
+python -m src.main adopt cat Buddy
+python -m src.main status
+python -m src.main chat "Hello!"
+```
+
+## Current Limitations
+
+- The dependency list is still very minimal relative to the broader architecture
+- LLM chat depends on a local Ollama setup
+- The project ships as a local CLI rather than a packaged installable application
+
+## Roadmap
+
+- Package the CLI more formally for installation and updates
+- Expand pet behaviors and personality depth
+- Improve local model integration and fallback behavior
+- Continue refining the layered architecture documentation
 
 ## License
 
-MIT
+MIT - see `LICENSE` for details.
